@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="menuClickChange.emit()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <h1>{{text}}</h1>
+    <div class="filler"></div>
+    <button mat-icon-button [matMenuTriggerFor]="settings">
+        <mat-icon>settings</mat-icon>
+    </button>
+    <mat-menu #settings>
+        <button mat-menu-item (click)="$event.stopPropagation()">
+            <mat-slide-toggle>Dunkler Modus</mat-slide-toggle>
+        </button>
+    </mat-menu>
+</mat-toolbar>

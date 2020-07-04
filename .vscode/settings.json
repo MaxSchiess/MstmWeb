@@ -1,0 +1,6 @@
+{
+    "eslint.options": {
+        "extensions": [".ts", ".html"],
+    },
+    "eslint.workingDirectories": [ "./WebApp" ]
+}

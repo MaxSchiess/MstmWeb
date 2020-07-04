@@ -1,0 +1,26 @@
+
+mstm-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 60px;
+}
+
+mat-sidenav-container {
+    height: 100%;
+}
+
+.app-container {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+mat-sidenav, mat-sidenav-content {
+    padding: 8px;
+}

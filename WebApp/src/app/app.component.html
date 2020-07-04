@@ -1,0 +1,9 @@
+<div #appContainer class="app-container">
+    <mstm-header (menuClickChange)="sidenav.toggle()"></mstm-header>
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav [(opened)]="sidenavOpen" [mode]="sidenavMode">TODO: Menu goes here</mat-sidenav>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

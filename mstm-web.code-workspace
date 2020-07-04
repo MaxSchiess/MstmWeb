@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "MstmWeb",
+			"path": "."
+		}
+	],
+	"settings": {
+		"eslint.options": {
+			"extensions": [
+				".ts",
+				".html"
+			]
+		},
+		"eslint.workingDirectories": [
+			"./WebApp"
+		]
+	}
+}
