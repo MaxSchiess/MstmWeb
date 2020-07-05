@@ -5,9 +5,11 @@
     <Nullable>enable</Nullable>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <RootNamespace>MSTM.Server</RootNamespace>
+    <AssemblyName>MSTM.Server</AssemblyName>
+    <StartupObject>MSTM.Server.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1"/>
-    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.5.1"/>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.5.1" />
   </ItemGroup>
 </Project>

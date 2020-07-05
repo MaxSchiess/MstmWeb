@@ -1,5 +1,5 @@
-import { Component, Output, EventEmitter, ElementRef } from '@angular/core';
-import { isMobile } from 'src/app/app.component';
+import { Component, Output, EventEmitter } from '@angular/core';
+import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 
 @Component({
   selector: 'mstm-header',
@@ -9,10 +9,14 @@ import { isMobile } from 'src/app/app.component';
 export class HeaderComponent {
 
   @Output() menuClickChange: EventEmitter<void> = new EventEmitter();
-  
-  get text(): string {
-    return isMobile ? 'MSTM e.V.' : 'Musikverein Sankt Mang e.V.'
-  }
 
-  constructor(private readonly _elementRef: ElementRef) { }
+  get text(): string {
+    return this.isHandsetPortrait ? 'MSTM e.V.' : 'Musikverein Sankt Mang e.V.'
+  }
+  isHandsetPortrait = false;
+
+  constructor(private readonly _breakpointObserver: BreakpointObserver) {
+    _breakpointObserver.observe([Breakpoints.HandsetPortrait])
+      .subscribe(r => this.isHandsetPortrait = r.matches);
+  }
 }
